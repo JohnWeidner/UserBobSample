@@ -1,5 +1,11 @@
 <?php
-include_once './autoload.php';
+include_once './notices.php';
+if ($notices) {
+    foreach ($notices as $notice) {
+        echo "<p>$notice</p>";
+    }
+}
+
 $test = new \Database\Test;
 $user = isset($_GET['username']) ? $_GET['username'] : null;
 $tests = $test->getUserTests($user);
