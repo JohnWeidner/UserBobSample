@@ -1,3 +1,6 @@
+<?php
+include_once './notices.php';
+?>
 <?php include_once './head.php'; ?>
 <header>
     <div class="container" id="maincontent" tabindex="-1">
@@ -24,6 +27,9 @@
                 <p>
                     This is a sample site that uses the client library of UserBob created for PHP so to make the developer's Job simpler.
                 </p>
+                <?php foreach ($notices as $notice) : ?>
+                    <p><?= $notice ?></p>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -49,7 +55,7 @@
                 <p>In dashboard, Enter your username to see tests created by you. Click the results button to see the results or abort button to abort the test</p>
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
+                <a href="https://github.com/Farzoqe/UserBobSample" class="btn btn-lg btn-outline">
                     <i class="fa fa-github"></i> Get Code from GitHub
                 </a>
             </div>

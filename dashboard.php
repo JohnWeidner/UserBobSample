@@ -14,7 +14,11 @@ $tests = $test->getUserTests($user);
                 <?php if ($tests): ?>
                     <h2>Your Tests</h2>
                 <?php else: ?>
-                    <h2>No test exists for this user</h2>
+                    <?php if ($_GET['username']): ?>
+                        <h2>No test exists for this user</h2>
+                    <?php else: ?>
+                        <h2>Please set username to see tests.</h2>
+                    <?php endif; ?>
                 <?php endif; ?>
                 <hr class="star-primary">
                 <?php if ($tests): ?>
@@ -51,7 +55,7 @@ $tests = $test->getUserTests($user);
                     </table>
                 <?php endif; ?>
 
-                <form class="form-inline" method="get" action="">
+                <form class="form-inline" method="get" action="" style="margin-top: 20px;">
                     <div class="form-group">
 
                         <input type="text" name="username" value="<?= $_GET['username'] ?>" placeholder="Set Username..." class="form-control">

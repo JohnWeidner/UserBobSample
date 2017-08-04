@@ -16,9 +16,9 @@ namespace Database;
 class config {
 
     private static $hostname = 'localhost';
-    private static $user = 'thezoq_userbob';
-    private static $password = '2]}m(6v=Z!hC';
-    private static $database = 'thezoq_userbob';
+    private static $user = '<DB_USERNAME>';
+    private static $password = '<DB_PASSWORD>';
+    private static $database = '<DB_NAME>';
 
     public static function getHostname() {
         return self::$hostname;

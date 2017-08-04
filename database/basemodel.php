@@ -20,6 +20,9 @@ class BaseModel {
 
     public function __construct() {
         $this->mysql = new \mysqli(config::getHostname(), config::getUser(), config::getPassword(), config::getDatabase());
+        if ($this->mysql->connect_error) {
+            die('Connect Error (' . $this->mysql->connect_errno . ') ' . $this->mysql->connect_error);
+        }
     }
 
     function all() {

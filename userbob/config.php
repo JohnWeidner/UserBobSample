@@ -15,8 +15,8 @@ namespace UserBob;
  */
 class config {
 
-    private static $clientId = 1445;
-    private static $apiKey = 'FMXTHTMAPYIJJNNMXZWYUYMVZEZNSQEOXVKAQAOEUTKPKNVNJOHQCYXDZGPKLBBCVYEHBPUKNUBAVYAEYJMKGGFFCYFVKWLWHKMF';
+    private static $clientId = '<USERBOB_CLIENT_ID>';
+    private static $apiKey = '<USERBOB_API_KEY>';
 
     static function getClientId() {
         return self::$clientId;

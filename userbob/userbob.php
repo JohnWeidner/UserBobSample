@@ -31,7 +31,7 @@ class UserBob {
             echo "There was an error getting your balance";
     }
 
-    function getResults($minTestResultId = 0) {
+    function getResults($minTestResultId = 0, &$numResults) {
         $request = new HttpRequest();
         $parameters = array(
             'minTestResultId' => $minTestResultId,
@@ -43,6 +43,7 @@ class UserBob {
             die;
         }
         $testResults = [];
+        $numResults = count($response);
         foreach ($response as $row) {
             $userbobResult = new TestResult;
             $workerDetails = $this->getWorker($row->workerId);

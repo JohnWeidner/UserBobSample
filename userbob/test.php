@@ -18,7 +18,7 @@ class Test {
     private $id;
     private $testName;
     private $testType = 'WEB';
-    private $scenario = 'This is for test purpose';
+    private $scenario = '';
     private $instructions;
     private $url;
     private $numMinutes = '1';
