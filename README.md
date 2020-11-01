@@ -1,5 +1,5 @@
 # UserBobSample
-This is code to a sample site for using UserBob.
+This is code of a sample site for using UserBob's API.
 This package include the DB-structure.sql file for sample site.
 ## How to setup
 - Upload this to one of your site
